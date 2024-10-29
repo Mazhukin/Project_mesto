@@ -1,0 +1,16 @@
+.footer {
+  margin-bottom: 60px;
+}
+
+.footer__footnote {
+  color: #545454;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 680px) {
+  .footer__footnote {
+    font-size: 14px;
+  }
+}

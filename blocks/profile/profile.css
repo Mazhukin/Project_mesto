@@ -1,0 +1,127 @@
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 680px) {
+  .profile {
+    flex-direction: column;
+    margin-top: 38px;
+  }
+}
+
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url(/images/Jacques.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__avatar {
+    margin-top: 3px;
+  }
+}
+
+.profile__info {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__info {
+    position: relative;
+    left: 0;
+    max-width: 282px;
+    margin: 0 auto;
+    margin-top: 3px;
+  }
+}
+
+.profile__title {
+  justify-content: flex-start;
+  margin: 0;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__title {
+    max-width: 189px;
+    margin: auto;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+}
+
+.profile__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    line-height: 35px;
+    text-align: center;
+  }
+}
+
+.profile__edit-button {
+  position: absolute;
+  top: 36px;
+  left: 461px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__edit-button {
+    position: relative;
+    top: 15px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .profile__edit-button {
+    position: absolute;
+    top: 155px;
+    left: 255px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.profile__add-button {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+  .profile__add-button {
+    width: 282px;
+    margin-top: 43px;
+  }
+}

@@ -1,0 +1,36 @@
+@import url(../blocks/header/header.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/popup/popup.css);
+
+.page {
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: auto;
+  color: white;
+  font-family: Inter, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background-color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header__logo:hover,
+.popup__form-button:hover,
+.profile__edit-button:hover,
+.profile__add-button:hover,
+.card__like:hover,
+.popup__button-close,
+.card__button-delete {
+  opacity: 0.6;
+}
+
+.content {
+  margin-top: 41px;
+  margin-bottom: 66px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mesto" />
+    <meta property="og:title" content="Mesto" />
+    <meta property="og:url" content="https://maybesofter.com/" />
+    <meta property="og:image" content="/images/favicon.jpg" />
+    <title>Mesto</title>
+    <link rel="icon" href="/images/favicon.jpg" sizes="any" />
+    <link rel="apple-touch-icon" href="/images/favicon.jpg" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="pages/index.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <a class="header__logo" href="#">
+        <img class="header__logo-image" src="images/logo.svg" alt="логотип" />
+      </a>
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <div class="profile__avatar"></div>
+        <div class="profile__info">
+          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <p class="profile__subtitle">Исследователь океана</p>
+        </div>
+        <button class="profile__edit-button" type="button"></button>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+
+      <section class="cards">
+        <template id="card">
+          <div class="card">
+            <img class="card__image" alt="картинка карточки" src="#" />
+            <div class="card__info">
+              <h2 class="card__title"></h2>
+              <button class="card__like"></button>
+            </div>
+            <div class="card__button-delete"></div>
+          </div>
+        </template>
+      </section>
+      <div class="popup" id="popup_edit">
+        <div class="popup__container">
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <form class="popup__form" id="popup__form-edit">
+            <input
+              class="popup__form-input"
+              id="popup__form-name"
+              type="text"
+              placeholder="Имя"
+            />
+            <input
+              class="popup__form-input"
+              id="popup__form-profession"
+              type="text"
+              placeholder="Профессия"
+            />
+            <button class="popup__form-button" type="submit">Сохранить</button>
+          </form>
+          <div class="popup__button-close"></div>
+        </div>
+      </div>
+
+      <div class="popup" id="popup_add">
+        <div class="popup__container">
+          <h3 class="popup__title">Новое место</h3>
+          <form class="popup__form" id="popup__form-add">
+            <input
+              class="popup__form-input"
+              id="popup__form-place"
+              type="text"
+              placeholder="Название"
+            />
+            <input
+              class="popup__form-input"
+              id="popup__form-link"
+              type="text"
+              placeholder="Ссылка на картинку"
+            />
+            <button class="popup__form-button" type="submit">Создать</button>
+          </form>
+          <div class="popup__button-close"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__footnote">&copy;2024. Mesto Russia</p>
+    </footer>
+  </body>
+  <script src="/scripts/script.js"></script>
+</html>
