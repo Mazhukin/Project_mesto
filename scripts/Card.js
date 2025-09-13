@@ -1,16 +1,13 @@
-const popupImageCard = document.querySelector(".popup__image");
-const popupImageTitleCard = document.querySelector(".popup__image-title");
-const popupImage = document.querySelector('#popup_image'); 
+import {popupImageCard, popupImageTitleCard, popupImage} from '../utils/constants.js'
 
 export default class Card {
-  constructor(name, link, openPopup) {
-    this.name = name;
-    this.link = link;
+  constructor(data, openPopup) {
+    this.name = data.name;
+    this.link = data.link;
     this.openPopup = openPopup;
   }
 
   #getTemplate() {
-    //получаем темплейт
     const cardElement = document
       .querySelector("#card-template")
       .content.querySelector(".card")
@@ -19,7 +16,6 @@ export default class Card {
   }
 
   generateCard() {
-    //Метод добавления в разметку
     this.element = this.#getTemplate(); // Запишем разметку
     this.element.querySelector(".card__image").src = this.link;
     this.element.querySelector(".card__image").alt = this.name;
@@ -30,7 +26,6 @@ export default class Card {
   }
 
   #handleLikeCard() {
-    //лайк карточки
     //находим в элементе класс и добавляем/убираем ему active
     this.element
       .querySelector(".card__like-button")
@@ -38,7 +33,6 @@ export default class Card {
   }
 
   #handleDeleteCard() {
-    //удаление карточки
     //находим ближайший родительский элемент с этим классом и удаляем его
     this.element.closest(".card").remove();
   }
@@ -52,18 +46,18 @@ export default class Card {
   }
 
   #setEventListeners() {
-    //слушатель событий
+    //слушатели события
     this.element
       .querySelector(".card__like-button")
       .addEventListener("click", () => {
         this.#handleLikeCard();
-      });
+      }); //лайк карточки
 
     this.element
       .querySelector(".card__delete-button")
       .addEventListener("click", () => {
         this.#handleDeleteCard();
-      });
+      }); //удаление карточки
 
     this.element
       .querySelector(".card__image")
