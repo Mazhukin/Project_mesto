@@ -66,19 +66,4 @@ const initialCards = [
   },
 ];
 
-// const objectForm = {
-//   formSelector: '.popup__form',
-//   inputSelector: '.popup__input',
-//   submitButtonSelector: '.popup__form-button',
-//   inactiveButtonClass: 'popup__form-button_invalid',
-//   inputErrorClass: 'popup__input_error',
-// };
 
-
-// const popupImage = document.querySelector("#popup_image");
-// const popupName = document.querySelector('.popup');
-// const initialContainer = document.querySelector('.elements');
-// const popupImageCard = document.querySelector('.popup__image');
-// const popupImageTitleCard = document.querySelector('.popup__image-title');
-// const buttonElement = document.querySelector('.popup__form-button');
-// const buttonFormAdd = document.querySelector('#popup__form-button_add');

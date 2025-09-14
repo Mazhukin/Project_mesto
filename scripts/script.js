@@ -1,5 +1,6 @@
 import Card from "./Card.js";
-import { 
+import FormValidator from "./FormValidator.js";
+import {
   initialCards,
   popupImage,
   buttonOpenPopupEdit,
@@ -16,7 +17,13 @@ import {
   popupFormAdd,
   placeInput,
   linkInput,
-  buttonClosePopupImage,} from '../utils/constants.js'
+  buttonClosePopupImage,
+} from "../utils/constants.js";
+
+const formElement = document.querySelector(".popup__form");
+const inputElement = formElement.querySelector(".popup__input");
+
+new FormValidator(inputElement).enableValidation(); //проверка полей на валидность
 
 // открывает попап
 const openPopup = (popupName) => {
