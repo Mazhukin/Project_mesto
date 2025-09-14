@@ -18,13 +18,9 @@ import {
   placeInput,
   linkInput,
   buttonClosePopupImage,
+  popupFormEdit
 } from "../utils/constants.js";
-
-const formElement = document.querySelector(".popup__form");
-const inputElement = formElement.querySelector(".popup__input");
-
-new FormValidator(inputElement).enableValidation(); //проверка полей на валидность
-
+ 
 // открывает попап
 const openPopup = (popupName) => {
   popupName.classList.add("popup_opened");
@@ -81,6 +77,14 @@ buttonClosePopupAdd.addEventListener("click", () => closePopup(popupAdd)); //з�
 popupFormAdd.addEventListener("submit", handleSubmitAddInitialForm); //сабмит добавления
 
 buttonClosePopupImage.addEventListener("click", () => closePopup(popupImage)); // закрывает попап картинки
+
+//валидация формы редактирования
+new FormValidator(popupFormEdit).enableValidation();
+//валидация формы добавления
+new FormValidator(popupFormAdd).enableValidation();
+
+
+
 
 // //закрывает попап по оверлэй
 // function closePopupOverlay(evt) {

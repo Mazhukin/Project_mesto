@@ -18,6 +18,7 @@ export {
   placeInput,
   linkInput,
   buttonClosePopupImage,
+  popupFormEdit,
 };
 
 const popupImageCard = document.querySelector(".popup__image");
@@ -38,6 +39,7 @@ const popupFormAdd = document.querySelector("#popup__form_add");
 const placeInput = document.querySelector(".popup__input_type_place");
 const linkInput = document.querySelector(".popup__input_type_link");
 const buttonClosePopupImage = document.querySelector("#popup__close-button_image");
+const popupFormEdit = document.querySelector('#popup__form_edit');
 
 const initialCards = [
   {
